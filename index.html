@@ -31,13 +31,16 @@
 body {
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  background: url("sj.jpg") no-repeat center center / cover;
 }
 
 .cover-container {
-  max-width: 42em;
+  max-width: 50em;
 }
 
-
+audio{
+display:none;
+}
 /*
  * Header
  */
@@ -63,23 +66,106 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
+
+main h1{
+	font-family: 'Great Vibes', cursive;
+	font-size: 9vw;
+    color: #fff;
+    margin-top: 2vw;
+}
+#timer {
+    width: 60%;
+    margin: 0 auto;
+}
+#timer .time:first-child {
+    border-left: transparent;
+}
+#timer .time {
+    width: 25%;
+    font-size: 40px;
+    font-weight: 500;
+    border-left: 1px solid rgba(250, 250, 250, 0.15);
+    color: rgb(255, 255, 255);
+    margin-bottom: 0px;
+}
+#timer .time span { font-size: 12px; display: block; color: rgb(255, 255, 255); letter-spacing: 2px; text-transform: uppercase; }
+.subheading {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 7px;
+    position: relative;
+}
+.subheading:before {
+    position: absolute;
+    top: 50%;
+    left: -150px;
+    content: '';
+    width: 130px;
+    height: 2px;
+    background: #fff;
+}
+.subheading:after {
+    position: absolute;
+    top: 50%;
+    right: -140px;
+    content: '';
+    width: 130px;
+    height: 2px;
+    background: #fff;
+}
+.icon {
+    line-height: 0;
+    font-size: 14vw;
+    color: #fff;
+}
+.icon.rose {
+    background: url("rose.svg") no-repeat center;
+	max-width: 256px;
+	max-height: 256px;
+	width: 14vw;
+	height: 10vw;
+	margin: 0 auto;
+}
 </style>
-  </head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> 
+
+ </head>
+ 
   <body class="d-flex h-100 text-center text-white bg-dark">
   
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <div class="cover-container d-flex w-100 h-100 px-4 mx-auto flex-column row js-fullheight justify-content-center align-items-center">
   
-  <main class="px-3">
-    <h1>Sandra y José</h1>
-    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
-    </p>
+  <main class="px-3 my-5">
+  
+    
+  <div class="text text-center">
+<div class="icon rose">
+</div>
+<span class="subheading">Te invitamos a la Boda de</span>
+<h1>Sandra &amp; José</h1>
+
+<div id="timer" class="d-flex">
+<div class="time" id="days">30<span>Dias</span></div>
+<div class="time pl-3" id="hours">07<span>Horas</span></div>
+<div class="time pl-3" id="minutes">50<span>Minutos</span></div>
+<div class="time pl-3" id="seconds">53<span>Segundos</span></div>
+</div>
+</div>
   </main>
 
 </div>
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+<audio controls autoplay>
+  <source src="music.ogg" type="audio/ogg">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
 	</body>
 </html>
+
+
