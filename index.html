@@ -96,7 +96,24 @@ main h1{
 		font-size: 30px;
 	}
 }
-#timer .time span { font-size: 12px; display: block; color: rgb(255, 255, 255); letter-spacing: 2px; text-transform: uppercase; }
+#timer .time span { 
+	font-size: 2.3vw;
+	display: block;
+	color: rgb(255, 255, 255);
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+@media (min-width: 600px) {
+  #timer .time span {
+     font-size: 14px;
+  }
+}
+@media (min-width: 1200px) {
+  #timer .time span {
+     font-size: 16vw;
+  }
+}
+
 .subheading {
     font-size: 2.3vw;
     font-weight: 600;
@@ -175,6 +192,9 @@ main h1{
 </div>
   
   <script>
+  
+  //https://www.google.com/maps/place/Lidotel+San+Crist%C3%B3bal/@7.7912259,-72.237004,949m/data=!3m1!1e3!4m8!3m7!1s0x0:0x829e7b80b1b42888!5m2!4m1!1i2!8m2!3d7.7920565!4d-72.2351232
+  
      // document.addEventListener('DOMContentLoaded', () => { 
         //===
         // VARIABLES
@@ -208,10 +228,10 @@ main h1{
             const REMAINING_SECONDS = Math.floor((DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND);
             
             // Render
-            SPAN_DAYS.textContent = REMAINING_DAYS;
-            SPAN_HOURS.textContent = REMAINING_HOURS;
-            SPAN_MINUTES.textContent = REMAINING_MINUTES;
-            SPAN_SECONDS.textContent = REMAINING_SECONDS;
+            SPAN_DAYS.innerHTML = REMAINING_DAYS + '<span>Dias</span>';
+            SPAN_HOURS.innerHTML = REMAINING_HOURS + '<span>Horas</span>';
+            SPAN_MINUTES.innerHTML = REMAINING_MINUTES + '<span>Minutos</span>';
+            SPAN_SECONDS.innerHTML = REMAINING_SECONDS + '<span>Segundos</span>';
         }
         //===
         // INIT
