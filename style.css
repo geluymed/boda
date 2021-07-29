@@ -25,13 +25,25 @@ body {
     -ms-user-select:none;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: .3;
+    background: #000;
+}
+
 .cover-container {
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
   background: url("sj.jpg") no-repeat center center / cover;
 }
 .cover-container main {
-  max-width: 55em;
+	max-width: 55em;
+    z-index: 1;
 }
 
 audio{
@@ -64,10 +76,16 @@ display:none;
 }
 
 .text3d {
-	text-shadow: 0px 1px 0px #C7C8CA, 0px 2px 0px #B1B3B6, 0px 3px 0px #9D9FA2, 0px 4px 0px #8A8C8E, 0px 5px 0px #77787B, 0px 6px 0px #636466, 0px 7px 0px #4D4D4F, 0px 8px 7px #001135;
+	/*text-shadow: 0px 1px 0px #C7C8CA, 0px 2px 0px #B1B3B6, 0px 3px 0px #9D9FA2, 0px 4px 0px #8A8C8E, 0px 5px 0px #77787B, 0px 6px 0px #636466, 0px 7px 0px #4D4D4F, 0px 8px 7px #001135;*/
+	text-shadow: 1px 1px 2px rgb(0 0 0 / 60%);
 	color: #fff;
 	font-family: 'Great Vibes', cursive;
 }
+
+.title {
+    font-size: 3vw;
+    margin-bottom: 1vw;
+	}
 
 main h1{
 	font-family: 'Great Vibes', cursive;
@@ -175,7 +193,18 @@ main h1{
     background-repeat: no-repeat;
     background-position: center;
     padding: 3vw;
+	position: relative;
 }
+.iglesia .overlay {
+    left: 5%;
+    width:90%;
+}
+
+.iglesia .text {
+	z-index: 1;
+	position: relative;
+}
+
 .marco {
 	position: relative;
     padding: 70px 32px;
