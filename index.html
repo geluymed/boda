@@ -8,183 +8,29 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	
+	<link href="style.css" rel="stylesheet">
+	
     <title>Sandra y José</title>
-<style>
-/*
- * Globals
- */
 
-
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-}
-
-
-/*
- * Base structure
- */
-
-body {
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-  background: url("sj.jpg") no-repeat center center / cover;
-  
-  -webkit-user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -ms-user-select:none;
-}
-
-.cover-container {
-  max-width: 50em;
-}
-
-audio{
-display:none;
-}
-/*
- * Header
- */
-
-.nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: 700;
-  color: rgba(255, 255, 255, .5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
-}
-
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
-}
-
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
-}
-
-.nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
-}
-
-main h1{
-	font-family: 'Great Vibes', cursive;
-	font-size: 9vw;
-    color: #fff;
-    margin-top: 2vw;
-}
-#timer {
-    width: 60%;
-    margin: 0 auto;
-}
-#timer .time:first-child {
-    border-left: transparent;
-}
-#timer .time {
-    width: 25%;
-    font-size: 40px;
-    font-weight: 500;
-    border-left: 1px solid rgba(250, 250, 250, 0.15);
-    color: rgb(255, 255, 255);
-    margin-bottom: 0px;
-}
-@media (max-width: 991.98px) {
-	#timer {
-		width: 90%;
-	}
-	#timer .time {
-		font-size: 30px;
-	}
-}
-#timer .time span { 
-	font-size: 2.3vw;
-	display: block;
-	color: rgb(255, 255, 255);
-	letter-spacing: 2px;
-	text-transform: uppercase;
-}
-@media (min-width: 600px) {
-  #timer .time span {
-     font-size: 14px;
-  }
-}
-@media (min-width: 1200px) {
-  #timer .time span {
-     font-size: 16px;
-  }
-}
-
-.subheading {
-    font-size: 2.3vw;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #fff;
-    letter-spacing: 7px;
-    position: relative;
-}
-.subheading:before {
-    position: absolute;
-    top: 50%;
-    left: -150px;
-    content: '';
-    width: 130px;
-    height: 2px;
-    background: #fff;
-}
-.subheading:after {
-    position: absolute;
-    top: 50%;
-    right: -140px;
-    content: '';
-    width: 130px;
-    height: 2px;
-    background: #fff;
-}
-.icon {
-    line-height: 0;
-    font-size: 14vw;
-    color: #fff;
-}
-.icon.rose {
-    background: url("rose.svg") no-repeat center/contain;
-	max-width: 256px;
-	max-height: 256px;
-	width: 14vw;
-	height: 10vw;
-	margin: 0 auto;
-}
-@media (max-width: 767.98px) {
-	.subheading:after, .subheading:before {
-		display: none;
-	}
-}
-		  
-</style>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> 
 
  </head>
  
-  <body class="d-flex h-100 text-center text-white bg-dark">
+  <body class="h-100 text-center text-dark">
   
   <div class="cover-container d-flex w-100 h-100 px-4 mx-auto flex-column row js-fullheight justify-content-center align-items-center">
   
   <main class="px-3 my-5">
   
-    
   <div class="text text-center">
 <div class="icon rose">
 </div>
-<span class="subheading">Te invitamos a la Boda de</span>
-<h1>Sandra &amp; José</h1>
-
+<h1 class="text3d">Sandra &amp; José</h1>
+<span class="subheading">21 de agosto 2021</span>
 <div id="timer" class="d-flex">
 <div class="time" id="days">30<span>Dias</span></div>
 <div class="time pl-3" id="hours">07<span>Horas</span></div>
@@ -195,12 +41,46 @@ main h1{
   </main>
 
 </div>
+
+<div class="px-4 py-5 text-center border-bottom area">
+  <div class="px-3 my-5">
+  <div class="invitados text text-center">
+	<span>"Pedro Perez"</span><br/>
+	Te invitamos a nuestra Boda el <br/>
+	Sabado 21 de octubre, 2021
+  </div>
+  </div>
+</div>
+
+  <div class="px-4 pt-5 text-center border-bottom">
+  <div class="row marco">
+  <div class="col-xl-6 iglesia text3d">
+  <div class="text text-center">
+  <h3>Celebracion Eclesiastica</h3>
+	<h4>Parroquia de Nuestra Señora del Perpetuo Socorro.</h4>
+	<span>hora: 5:00 PM </span>
+	<span>Cra12 con calle 12, Frente a la plaza las palomas</span>
+	</div>
+	</div>
+   
+  <div class="col-xl-6">
+	<div class="iglesia-map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233.56135011971767!2d-72.22754226685367!3d7.771724936396626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e666c98875e5239%3A0xb63b63ea0285d799!2sIglesia%20El%20Perpetuo%20Socorro%2C%2012%2C%20San%20Crist%C3%B3bal%205001%2C%20T%C3%A1chira!5e1!3m2!1ses-419!2sve!4v1627516659157!5m2!1ses-419!2sve" allowfullscreen="" loading="lazy"></iframe>
+	</div>
+</div>
+  </div>
+  </div>
   
+<div class="col-6 px-3 my-5">
+  <div class="text text-center">
+   sdf sdfhsdfsdfhsd fhkwerw
+</div>
+  </div>
   <script>
   
   //https://www.google.com/maps/place/Lidotel+San+Crist%C3%B3bal/@7.7912259,-72.237004,949m/data=!3m1!1e3!4m8!3m7!1s0x0:0x829e7b80b1b42888!5m2!4m1!1i2!8m2!3d7.7920565!4d-72.2351232
   
-     // document.addEventListener('DOMContentLoaded', () => { 
+      document.addEventListener('DOMContentLoaded', () => { 
         //===
         // VARIABLES
         //===
@@ -244,7 +124,8 @@ main h1{
         updateCountdown();
         // Refresh every second
         setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
-   // });
+    });
+
     </script>
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
