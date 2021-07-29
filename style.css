@@ -83,8 +83,9 @@ display:none;
 }
 
 .title {
-    font-size: 3vw;
+    font-size: 4vw;
     margin-bottom: 1vw;
+	color: #f67e7d;
 	}
 
 main h1{
@@ -195,13 +196,24 @@ main h1{
     padding: 3vw;
 	position: relative;
 }
-.iglesia .overlay {
+.iglesia .overlay, .lidotel .overlay{
     left: 5%;
     width:90%;
+	opacity: .5;
 }
 
-.iglesia .text {
+.iglesia .text, .lidotel .text{
 	z-index: 1;
+	position: relative;
+	font-size: 3vw;
+}
+
+.lidotel {	
+	background: url("lidotel.jpg");
+    background-size: 90% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 3vw;
 	position: relative;
 }
 
@@ -240,8 +252,11 @@ main h1{
     -ms-transform: rotate(0.5deg);
     transform: rotate(0.5deg);
 }
-
-.iglesia-map iframe {
+.map {
+	position: relative;
+	z-index: 5;
+}
+.map iframe {
 	border:0;
     width: 100%;
     min-height: 30vw;
