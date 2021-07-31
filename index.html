@@ -126,9 +126,7 @@
   <div class="px-3 my-5">
   <div class="invitados text text-center">
 	<h3 class="text3d title">Confirmar Asistencia</h3>
-	<p>Por favor, confírmanos tu asistencia enviando mensaje al </p>
-	<p>0424-7011162</p>
-	<p class="text3d title">Te esperamos!</p>
+	<iframe id="confirmacion" src="https://docs.google.com/forms/d/e/1FAIpQLScGTS8s5tN1IrbYbXxZS5q7VSdW2Hxo-aQExQFEoGYPXM1W2A/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
   </div>
   </div>
 </div>
@@ -191,9 +189,14 @@
 		var url = new URL(url_string);
 		var c = url.searchParams.get("i");
 		var inv = document.querySelector('#invitado');
+		
+		var conf = document.querySelector('#confirmacion');
+		
 		if(c){
-			if(LISTA[c])
+			if(LISTA[c]){
 				inv.innerHTML = LISTA[c];
+				conf.setAttribute('src',"https://docs.google.com/forms/d/e/1FAIpQLScGTS8s5tN1IrbYbXxZS5q7VSdW2Hxo-aQExQFEoGYPXM1W2A/viewform?embedded=true&entry.1498135098="+LISTA[c]); 
+			}
 		}
 		
 		
