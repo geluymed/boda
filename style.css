@@ -17,8 +17,8 @@
  */
 
 body {
-	font-family: 'Poppins', sans-serif;
-  
+/*	font-family: 'Poppins', sans-serif;*/
+    font-family: 'Cormorant Garamond', serif;
   -webkit-user-select: none;
     -moz-user-select: none;
     -khtml-user-select: none;
@@ -46,9 +46,6 @@ body {
     z-index: 1;
 }
 
-audio{
-display:none;
-}
 /*
  * Header
  */
@@ -263,8 +260,20 @@ main h1{
 }
 	
 
+
+@media (max-width: 767.98px) {
+	.invitados{
+		font-size: 9vw;
+	}
+}
+@media (min-width: 1200px) {
+  .invitados{
+	font-size: 4vw;
+  }
+}
 .invitados{
-	font-size: 3vw;
+	font-size: 5vw;
+	font-family: 'Great Vibes', cursive;
 }
 
 #confirmacion {

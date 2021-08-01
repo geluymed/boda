@@ -11,7 +11,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+	<!--link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"-->
 	
 	<link href="style.css" rel="stylesheet">
 	
@@ -43,7 +44,7 @@
 </div>
 
 <div class="px-4 py-5 text-center border-bottom area">
-  <div class="px-3 my-5">
+  <div class="px-3 my-3">
   <div class="invitados text text-center">
 	<p id="invitado"></p>
 	<p>Estás invitado!</p>
@@ -126,13 +127,20 @@
   <div class="px-3 my-5">
   <div class="invitados text text-center">
 	<h3 class="text3d title">Confirmar Asistencia</h3>
-	<iframe id="confirmacion" src="https://docs.google.com/forms/d/e/1FAIpQLScGTS8s5tN1IrbYbXxZS5q7VSdW2Hxo-aQExQFEoGYPXM1W2A/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+	<iframe id="confirmacion" <!--src="https://docs.google.com/forms/d/e/1FAIpQLScGTS8s5tN1IrbYbXxZS5q7VSdW2Hxo-aQExQFEoGYPXM1W2A/viewform?embedded=true"--> frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
   </div>
   </div>
 </div>
 
+<audio id="music">
+  <!--source src="Hasta Mi Final.ogg" type="audio/ogg"-->
+  <source src="Hasta Mi Final.mp3" type="audio/mpeg">
+</audio>
+
   <script>
     
+	var audioPlay = true;
+	
       document.addEventListener('DOMContentLoaded', () => { 
         //===
         // VARIABLES
@@ -196,19 +204,44 @@
 			if(LISTA[c]){
 				inv.innerHTML = LISTA[c];
 				conf.setAttribute('src',"https://docs.google.com/forms/d/e/1FAIpQLScGTS8s5tN1IrbYbXxZS5q7VSdW2Hxo-aQExQFEoGYPXM1W2A/viewform?embedded=true&entry.1498135098="+LISTA[c]); 
+			}else{
+			conf.setAttribute('src',"https://docs.google.com/forms/d/e/1FAIpQLScGTS8s5tN1IrbYbXxZS5q7VSdW2Hxo-aQExQFEoGYPXM1W2A/viewform?embedded=true"); 
 			}
+		}else{
+			conf.setAttribute('src',"https://docs.google.com/forms/d/e/1FAIpQLScGTS8s5tN1IrbYbXxZS5q7VSdW2Hxo-aQExQFEoGYPXM1W2A/viewform?embedded=true"); 
 		}
 		
+		
+		window.addEventListener('scroll', function(e) {
+			if(audioPlay){
+				var x = document.getElementById("music");
+				var mi = x.play();
+				if (mi !== undefined) {
+					mi.then(_ => {
+						audioPlay = false;
+					});
+				}
+			}
+		});
+		window.addEventListener('mousedown', e => {
+			if(audioPlay){
+				var x = document.getElementById("music");
+				var mi = x.play();
+				if (mi !== undefined) {
+					mi.then(_ => {
+						audioPlay = false;
+					});
+					
+				}
+			}	
+		});
 		
     });
 
     </script>
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<audio controls autoplay>
-  <source src="music.ogg" type="audio/ogg">
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
+	
 	</body>
 </html>
 
