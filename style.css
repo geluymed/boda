@@ -42,7 +42,7 @@ body {
   background: url("sj.jpg") no-repeat center center / cover;
 }
 .cover-container main {
-	max-width: 55em;
+	width: 80vw;
     z-index: 1;
 }
 
@@ -101,6 +101,12 @@ main h1{
 	font-size: 9vw;
     margin: 1vw 0;
 }
+@media (max-width: 767.98px) {
+	main h1{
+		font-size: 12vw;
+	}
+}
+
 #timer {
     width: 60%;
     margin: 10px auto;
@@ -143,16 +149,21 @@ main h1{
 }
 
 .subheading {
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     font-weight: 600;
     text-transform: uppercase;
     color: #fff;
     letter-spacing: 7px;
     position: relative;
 }
+@media (min-width: 600px) {
+  .subheading {
+     font-size: 2.2vw;
+  }
+}
 @media (min-width: 1200px) {
   .subheading {
-     font-size: 1vw;
+     font-size: 1.7vw;
   }
 }
 .subheading:before {
@@ -178,18 +189,19 @@ main h1{
 		display: none;
 	}
 }
-.icon {
-    line-height: 0;
-    font-size: 14vw;
-    color: #fff;
-}
-.icon.rose {
+.rose {
     background: url("rose.svg") no-repeat center/contain;
-	max-width: 256px;
-	max-height: 256px;
-	width: 14vw;
+	width: 13vw;
 	height: 10vw;
 	margin: 0 auto;
+}
+
+@media (max-width: 767.98px) {
+	
+.rose {
+	width: 20vw;
+	height: 15vw;
+}
 }
 
 .anillos {
@@ -203,14 +215,12 @@ main h1{
 }
 
 .area {
-	background: url("xBackground_Circle.png");
+	background: url("xBackground_Circle.jpg");
 }
 
 .iglesia {
-	background: url("iglesia.jpg");
-    background-size: 90% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+	background: url(iglesia.jpg) no-repeat center center / cover;
+    background-position-y: bottom;
     padding: 3vw;
 	position: relative;
 	height: 70vh;
@@ -225,14 +235,12 @@ main h1{
 .iglesia .text, .lidotel .text{
 	z-index: 1;
 	position: relative;
-	font-size: 3vw;
+	font-size: 5vw;
 }
 
 .lidotel {	
-	background: url("lidotel.jpg");
-    background-size: 90% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+	background: url("lidotel.jpg") no-repeat center center / cover;
+   
     padding: 3vw;
 	position: relative;
 	height: 70vh;
@@ -241,18 +249,18 @@ main h1{
 
 .marco {
 	position: relative;
-    padding: 70px 32px;
-	min-height: 100vh;
+    padding: 70px 0;
+	min-height: 80vh;
 }
 .marco:before {
 	-webkit-box-sizing: border-box;
     box-sizing: border-box;
     position: absolute;
     top: 40px;
-    left: 20px;
-    right: 20px;
+    left: 40px;
+    right: 40px;
     bottom: 40px;
-    content: '';
+/*    content: '';*/
     border: 1px solid rgba(0, 0, 0, 0.15);
     z-index: 2;
     -webkit-transform: rotate(-0.5deg);
@@ -264,15 +272,21 @@ main h1{
     box-sizing: border-box;
     position: absolute;
     top: 40px;
-    left: 20px;
-    right: 20px;
+    left: 40px;
+    right: 40px;
     bottom: 40px;
-    content: '';
+    /*content: '';*/
     border: 1px solid rgba(0, 0, 0, 0.15);
     z-index: 1;
     -webkit-transform: rotate(0.5deg);
     -ms-transform: rotate(0.5deg);
     transform: rotate(0.5deg);
+}
+
+@media (min-width: 1200px) {
+  .marco:after, .marco:before{
+	  content:' ';
+  }
 }
 .map {
 	position: relative;
@@ -284,7 +298,11 @@ main h1{
     min-height: 300px;
 	height: 70vh;
 }
-	
+.comoLlegar {
+	background: url(comollegar.jpg) no-repeat center center /cover;
+    height: 17vw;
+    width: 50vw;
+}
 
 .invitados{
 	font-size: 5vw;
@@ -295,11 +313,17 @@ main h1{
 	.invitados{
 		font-size: 9vw;
 	}
+	.iglesia .text, .lidotel .text{
+		font-size: 9vw;
+	}
 }
 @media (min-width: 1200px) {
-  .invitados{
-	font-size: 4vw;
-  }
+	.invitados{
+		font-size: 4vw;
+	}
+  	.iglesia .text, .lidotel .text{
+		font-size: 4vw;
+	}
 }
 
 #confirmacion {
