@@ -345,7 +345,7 @@
 		window.addEventListener('scroll', function(e) {
 			if(audioPlay){
 				var x = document.getElementById("music");
-			//	var mi = x.play();
+				var mi = x.play();
 				if (mi !== undefined) {
 					mi.then(_ => {
 						audioPlay = false;
@@ -356,7 +356,7 @@
 		window.addEventListener('mousedown', e => {
 			if(audioPlay){
 				var x = document.getElementById("music");
-			//	var mi = x.play();
+				var mi = x.play();
 				if (mi !== undefined) {
 					mi.then(_ => {
 						audioPlay = false;
