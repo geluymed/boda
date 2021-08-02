@@ -43,7 +43,7 @@
 
 </div>
 
-<div class="px-4 py-5 text-center anillos">
+<div class="px-4 py-5 text-center anillos oculto">
   <div class="px-3 my-3">
   <div class="invitados text text-center" style="min-height:auto">
 	<div class="py-5">
@@ -55,7 +55,7 @@
   </div>
 </div>
 
-  <div class="pt-5 text-center">
+  <div class="pt-5 text-center oculto">
   <div class="marco iglesia">
   <div class="text3d">
 	<h3 class="title">Ceremonia Eclesiástica</h3>
@@ -88,7 +88,7 @@
   </div>
   
   
-  <div class="pt-5 text-center">
+  <div class="pt-5 text-center oculto">
   <div class="marco lidotel">
   <div class="text3d">
 	<h3 class="title">Resección</h3>
@@ -124,7 +124,7 @@
   </div>
   
 
-<div class="px-4 py-5 text-center regalos">
+<div class="px-4 py-5 text-center regalos oculto">
   <div class="px-3 my-5">
   <div class="marco invitados" style="min-height:auto">
   <div class="py-5">
@@ -138,7 +138,7 @@
   </div>
 </div>
 
-<div class="py-5 text-center area">
+<div class="py-5 text-center area oculto">
   <div class="my-4">
   <div class="invitados text text-center">
 	<h3 class="text3d title">Confirmar Asistencia</h3>
@@ -327,6 +327,11 @@
 			if(LISTA[c]){
 				inv.innerHTML = LISTA[c];
 				conf.setAttribute('src',"https://docs.google.com/forms/d/e/1FAIpQLScGTS8s5tN1IrbYbXxZS5q7VSdW2Hxo-aQExQFEoGYPXM1W2A/viewform?embedded=true&entry.1498135098="+LISTA[c]); 
+				var ocultos = document.getElementsByClassName("oculto");
+				var countO = ocultos.length;
+				for(i=0;i < countO;i++){
+					ocultos[0].classList.remove("oculto");
+				};
 			}else{
 			conf.setAttribute('src',"https://docs.google.com/forms/d/e/1FAIpQLScGTS8s5tN1IrbYbXxZS5q7VSdW2Hxo-aQExQFEoGYPXM1W2A/viewform?embedded=true"); 
 			}
