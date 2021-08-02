@@ -291,6 +291,15 @@ main h1{
 .map {
 	position: relative;
 	z-index: 5;
+	width: 22vw;
+}
+.map a {
+    color: #f67e7d;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+	text-shadow: 0px 1px 0px #c7c8ca, 0px 2px 0px #b1b3b6, 0px 3px 0px #9d9fa2, 0px 4px 0px #8a8c8e, 0px 5px 0px #77787b, 0px 6px 0px #636466, 0px 7px 0px #4d4d4f, 0px 8px 7px #001135;
+    text-shadow: 1px 1px 2px rgb(0 0 0 / 60%);
 }
 .map iframe {
 	border:0;
@@ -299,9 +308,40 @@ main h1{
 	height: 70vh;
 }
 .comoLlegar {
-	background: url(comollegar.jpg) no-repeat center center /cover;
-    height: 17vw;
-    width: 50vw;
+	background: url(comollegar.png) no-repeat center center /cover;
+    height: 13vw;
+    width: 20vw;
+}
+@media (max-width: 479px) {
+	.map a {
+	    font-size: 1rem;
+	}
+}
+@media (max-width: 379px) {
+	.map a {
+	    font-size: 0.8rem;
+	}
+}
+@media (min-width: 900px) {
+	.map {
+		width: 18vw
+	}
+	.map a {
+	    font-size: 1.6rem;
+	}
+	.comoLlegar {
+		height: 11vw;
+		width: 17vw;
+	}
+}
+@media (min-width: 1200px) {
+	.map {
+		width: 15vw
+	}
+	.comoLlegar {
+		height: 9vw;
+		width: 14vw;
+	}
 }
 
 .invitados{
@@ -314,7 +354,7 @@ main h1{
 		font-size: 9vw;
 	}
 	.iglesia .text, .lidotel .text{
-		font-size: 9vw;
+		font-size: 8vw;
 	}
 }
 @media (min-width: 1200px) {
@@ -322,7 +362,7 @@ main h1{
 		font-size: 4vw;
 	}
   	.iglesia .text, .lidotel .text{
-		font-size: 4vw;
+		font-size: 3vw;
 	}
 }
 
