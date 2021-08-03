@@ -409,3 +409,21 @@ main h1{
     width: 100%;
     height: 821px;
 }
+
+.bottom-audio {
+    bottom: 35px;
+    opacity: .7;
+    text-align: right;
+}
+#sound-bottom {
+	height: 40px;
+    width: 50px;
+    border: 0;
+    margin-right: 10vw;
+}
+#sound-bottom.mute-sound{	
+    background: url(mute.png) no-repeat center center / contain;
+}
+#sound-bottom.play-sound{	
+    background: url(sound.png) no-repeat center center / contain;
+}
