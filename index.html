@@ -103,11 +103,12 @@
 	<p>Hora: 7:30 <span class="font-normal-cursive">PM</span> </p>
 	<p>Lidotel San Cristóbal.</p>
 	<p>Salón Doral <span style="font-family:'Cormorant Garamond', sans-serif;font-style: italic;">III</span></p>
-	<!--p>Carrera 12 con calle 12, Frente a la plaza las palomas</p-->
+
+	<p class="valido-para">Valido para <span id="valido"></span></p>
+	
 	</div>
 	
 	
-  <!--div class="overlay"></div-->
 	</div>
   <div class="col-xl-6">
 	<div class="map mx-auto">
@@ -210,116 +211,116 @@
 		
 		
 		const LISTA = {
-	'412f0703':'Francisco Gonzalez',
-	'188f043f':'Tía Nancy',
-	'1d1d04aa':'Tía Gladys',
-	'19080454':'Tía Yumar',
-	'10700356':'Tía Ana',
-	'6421086d':'Carlos Eduardo y Esposa',
-	'634f0852':'Eduardo Parada y Esposa',
-	'820b09b0':'Neomar Colmenares y Esposa',
-	'26e80536':'Zenaida Rangel',
-	'1b09043c':'Mary y Nacho',
-	'25990510':'Franco y Norma',
+	'412f0703':['Francisco Gonzalez',1],
+	'188f043f':['Tía Nancy',1],
+	'1d1d04aa':['Tía Gladys',1],
+	'19080454':['Tía Yumar',1],
+	'10700356':['Tía Ana',1],
+	'6421086d':['Carlos Eduardo y Esposa',2],
+	'634f0852':['Eduardo Parada y Esposa',2],
+	'820b09b0':['Neomar Colmenares y Esposa',2],
+	'26e80536':['Zenaida Rangel',1],
+	'1b09043c':['Mary y Nacho',2],
+	'25990510':['Franco y Norma',2],
 	
-	'267a056a':'Alix Rodriguez',
-	'213904da':'Yohan Camargo',
-	'214a04da':'Zoila Camargo',
-	'1d29049e':'Yony Carrero',
-	'222f0501':'Tía Mariela',
-	'22420506':'Tía Matilde',
-	'21c504f0':'Tía Cecilia',
-	'2260050a':'Tío Gabriel',
-	'2309052e':'Tío Gonzalo',
-	'1d4a04a3':'Tía Martha',
-	'37c6063d':'Walter y Angelica',
-	'32a10632':'Karina Rodriguez',
-	'2b660598':'Abuela Herminia',
-	'4b9c076b':'Reina Vivas y Esposo',
-	'2659053c':'Javier Camargo',
-	'21ce04d0':'Yubany y Paty',
-	'2c74059f':'Rubiela Camargo',
-	'2737054c':'Yasmin Camargo',
-	'4b6f0765':'Tio Nazario y Esposa',
-	'204904c8':'Anita Camargo',
-	'0a5c024f':'Yuly M.',
-	'11970380':'Sr. Alonso',
-	'3be9068b':'Tio Pedro y Esposa',
+	'267a056a':['Alix Rodriguez',1],
+	'213904da':['Yohan Camargo',1],
+	'214a04da':['Zoila Camargo',1],
+	'1d29049e':['Yony Carrero',1],
+	'222f0501':['Tía Mariela',1],
+	'22420506':['Tía Matilde',1],
+	'21c504f0':['Tía Cecilia',1],
+	'2260050a':['Tío Gabriel',1],
+	'2309052e':['Tío Gonzalo',1],
+	'1d4a04a3':['Tía Martha',1],
+	'37c6063d':['Walter y Angelica',2],
+	'32a10632':['Karina Rodriguez',1],
+	'2b660598':['Abuela Herminia',1],
+	'4b9c076b':['Reina Vivas y Esposo',2],
+	'2659053c':['Javier Camargo',2],
+	'21ce04d0':['Yubany y Paty',2],
+	'2c74059f':['Rubiela Camargo',1],
+	'2737054c':['Yasmin Camargo',1],
+	'4b6f0765':['Tio Nazario y Esposa',2],
+	'204904c8':['Anita Camargo',1],
+	'0a5c024f':['Yuly M.',1],
+	'11970380':['Sr. Alonso',1],
+	'3be9068b':['Tio Pedro y Esposa',2],
 	
-	'767d08d6':'Sr. Rafael Gonzalez y Sra.',
-	'393e05fa':'Sr. Oswaldo y Sra.',
-	'0b870295':'Sra. Leo',
-	'6dfa08df':'Sr. Freddy Vivas y Esposa',
-	'37290639':'Freddy Jose Vivas',
-	'878509bf':'Freddy Javier VIvas y Novia',
+	'767d08d6':['Sr. Rafael Gonzalez y Sra.',2],
+	'393e05fa':['Sr. Oswaldo y Sra.',2],
+	'0b870295':['Sra. Leo',1],
+	'6dfa08df':['Sr. Freddy Vivas y Esposa',2],
+	'37290639':['Freddy Jose Vivas',1],
+	'878509bf':['Freddy Javier VIvas y Novia',2],
 		
-	'2e2905e4':'Lourdes Marquez',
-	'2c3605c1':'Angelo Gonzalez',
-	'2d5505d6':'Sharon Gonzalez',
-	'314e05fa':'Gianna Angelucci',
-	'414106f2':'Steffany Marciales',
-	'138d03a7':'Rejab Ezzi',
-	'21cb04f5':'Samuel Galviz',
-	'216c04ea':'Moise Georges',
-	'227904e6':'William Verde',
+	'2e2905e4':['Lourdes Marquez',1],
+	'2c3605c1':['Angelo Gonzalez',1],
+	'2d5505d6':['Sharon Gonzalez',1],
+	'314e05fa':['Gianna Angelucci',1],
+	'414106f2':['Steffany Marciales',1],
+	'138d03a7':['Rejab Ezzi',1],
+	'21cb04f5':['Samuel Galviz',1],
+	'216c04ea':['Moise Georges',1],
+	'227904e6':['William Verde',1],
 		
-	'320805f9':'Pierina y Victor',
-	'2d6605c4':'Daymiry y novio',
-	'258b053e':'Mafer y Esposo',
-	'74720927':'Clemente Frechón y Sra.',
-	'663608a3':'Manuel Huertas y Esposa',
+	'320805f9':['Pierina y Victor',2],
+	'2d6605c4':['Daymiry y novio',2],
+	'258b053e':['Mafer y Esposo',2],
+	'74720927':['Clemente y Lisbeth',2],
+	'663608a3':['Manuel Huertas y Esposa',2],
 		
-	'3a570695':'Rossana Fernandez',
-	'0aa202bd':'Maribel',
-	'0a4302bc':'Cachito',
-	'05a00209':'Betty',
-	'03d8019e':'Luis',
-	'32eb05fb':'Sr. Alexis Urbina',
-	'1152038f':'Isabelita',
-	'0aae02cf':'Genesis',
-	'0809026b':'Marilu',
-	'75830930':'Sr. Hugo Ceballos y Esposa',
+	'3a570695':['Rossana Fernandez',1],
+	'0aa202bd':['Maribel',1],
+	'0a4302bc':['Cachito',1],
+	'05a00209':['Betty',1],
+	'03d8019e':['Luis Mora',1],
+	'32eb05fb':['Alexis Urbina',1],
+	'1152038f':['Isabelita',1],
+	'0aae02cf':['Genesis',1],
+	'0809026b':['Marilu',1],
+	'75830930':['Sr. Hugo Ceballos y Esposa',2],
 	
-	'77390945':'Sr. Dennis Castro y Esposa',
-	'32110602':'Sr. Hugo Castillo',
-	'64f20872':'Sr. Regulo Lobo y Esposa',
-	'333a05e0':'Sra. Mohebia Sosa',
-	'2c650597':'Juan C. Quintero',
-	'b35e0bb2':'Sra. Elizabeth Chacón y Esposo',
+	'77390945':['Sr. Dennis Castro y Esposa',2],
+	'32110602':['Sr. Hugo Castillo',1],
+	'64f20872':['Sr. Regulo Lobo y Esposa',2],
+	'333a05e0':['Sra. Mohebia Sosa',1],
+	'2c650597':['Juan C. Quintero',1],
+	'b35e0bb2':['Sra. Elizabeth Chacón y Esposo',2],
 	
-	'18680435':'Luis Porras',
-	'1c5b0483':'Jose Noguera',
-	'2dd705c2':'Norelis Duitama',
-	'382f064e':'Sr. Eudes y Esposa',
-	'269e0565':'Flor Contreras',
-	'2bdc05c1':'Capitán Cacua',
-	'40050705':'Sr. Jesús Barrera',
-	'2756054b':'Sr. Luis Suarez',
-	'0b1302d6':'Olguita',
-	'07a80244':'Alicia',
+	'18680435':['Luis Porras',1],
+	'1c5b0483':['Jose Noguera',1],
+	'2dd705c2':['Norelis Duitama',1],
+	'382f064e':['Sr. Eudes y Esposa',2],
+	'269e0565':['Flor Contreras',1],
+	'2bdc05c1':['Capitán Cacua',1],
+	'40050705':['Sr. Jesús Barrera',1],
+	'2756054b':['Sr. Luis Suarez',1],
+	'0b1302d6':['Olguita',1],
+	'07a80244':['Alicia',1],
 
-	'8eb90a58':'Sr. Jesús Mendoza y Esposa',
-	'33f105c1':'Sr. Luis A. Ocaris',
-	'2d1605ac':'Anderson Davila',
-	'214e04e5':'Monica Galviz',
-	'3230061d':'Andres Hernandez',
-	'777d0942':'Sr. Gerardo Perez y Esposa',	
+	'8eb90a58':['Sr. Jesús Mendoza y Esposa',2],
+	'33f105c1':['Sr. Luis A. Ocaris',1],
+	'2d1605ac':['Anderson Davila',1],
+	'214e04e5':['Monica Galviz',1],
+	'3230061d':['Andres Hernandez',1],
+	'777d0942':['Sr. Gerardo Perez y Esposa',2],	
 	
-	'3978066d':'Francisco Barajas',
-	'7a270980':'Eduardo Quintero y Esposa',
-	'209904cd':'Cielo Arrocha ',
-	'1d800495':'Wilmer Duque',
-	'5ada079f':'Sr. Carlos Pena y Familia.',
-	'a00b0ab4':'Sr. Alfredo Hernandez y Esposa',
-	'19ae049f':'Juana Díaz',
-	'8d6209f0':'Nickols Manrique y familia.',
+	'3978066d':['Francisco Barajas',1],
+	'7a270980':['Eduardo Quintero y Esposa',2],
+	'209904cd':['Cielo Arrocha ',1],
+	'1d800495':['Wilmer Duque',1],
+	'5ada079f':['Sr. Carlos Pena y Esposa.',2],
+	'a00b0ab4':['Sr. Alfredo Hernandez y Esposa',2],
+	'19ae049f':['Juana Díaz',1],
+	'8d6209f0':['Nickols Manrique y Esposa',2],
 	
-	'26e90542':'Benedito Ariza',
-	'12a90395':'Tia Carmen',
-	'225f0506':'Belquis Moros',
-	'24ff0516':'Erika y Wilmer',
-	'275c0550':'Moraima Valero',
-	'1c44048c':'Denis Santos'
+	'26e90542':['Benedito Ariza',1],
+	'12a90395':['Tia Carmen',1],
+	'225f0506':['Belquis Moros',1],
+	'24ff0516':['Erika y Wilmer',2],
+	'275c0550':['Moraima Valero',1],
+	'1c44048c':['Denis Santos',1]
 	}
 		var url_string = window.location.href
 		var url = new URL(url_string);
@@ -330,8 +331,12 @@
 		
 		if(c){
 			if(LISTA[c]){
-				inv.innerHTML = LISTA[c];
-				conf.setAttribute('src',"https://docs.google.com/forms/d/e/1FAIpQLScGTS8s5tN1IrbYbXxZS5q7VSdW2Hxo-aQExQFEoGYPXM1W2A/viewform?embedded=true&entry.1498135098="+LISTA[c]); 
+				inv.innerHTML = LISTA[c][0];
+				conf.setAttribute('src',"https://docs.google.com/forms/d/e/1FAIpQLScGTS8s5tN1IrbYbXxZS5q7VSdW2Hxo-aQExQFEoGYPXM1W2A/viewform?embedded=true&entry.1498135098="+LISTA[c][0]); 
+				
+				var valido = document.getElementById("valido");				
+				valido.innerHTML = String(LISTA[c][1]) + (LISTA[c][1]>1? " Personas": " Persona");
+				
 				var ocultos = document.getElementsByClassName("oculto");
 				var countO = ocultos.length;
 				for(i=0;i < countO;i++){
