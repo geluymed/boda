@@ -463,11 +463,14 @@
 	  }
 	  if(asistira){
 		const comentario = document.getElementById("comentario");
+		const NOW = new Date();
+		const creado = NOW.getDay()+ '/' + NOW.getMonth() + '/' + NOW.getFullYear() + ' ' +NOW.getHours()+":"+NOW.getMinutes();
 		const data = {
 			'codigo': c,
 			'nombre': LISTA[c][0],
 			'asistira': asistira,
-			'Comentario': comentario.value
+			'Comentario': comentario.value,
+			'creado': creado
 		};
 		saveContactForm(data); 
 		form.reset();
