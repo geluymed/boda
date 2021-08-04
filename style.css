@@ -238,6 +238,7 @@ main h1{
 
 .area {
 	background: url("xBackground_Circle.jpg");
+	min-height: 60vh;
 }
 
 .iglesia {
@@ -393,6 +394,18 @@ main h1{
 	font-family: 'Great Vibes', cursive;
 }
 
+.box-asistir label, .box-asistir textarea{
+	font-size:4vw;
+}
+
+.box-asistir .box-title{
+	font-size: 5vw;
+    /*font-weight: bold;*/
+    text-align: left;
+    padding-left: 1.5em;
+	display: block;
+}
+
 @media (max-width: 700px) {
 	.invitados{
 		font-size: 9vw;
@@ -400,12 +413,22 @@ main h1{
 	.iglesia .text, .lidotel .text{
 		font-size: 8vw;
 	}
+	.box-asistir label, .box-asistir textarea {
+		font-size:6vw;
+	}
+	.box-asistir .box-title{
+		font-size: 9vw;
+		padding-left: 1em;
+	}
 }
 @media (min-width: 1200px) {
-	.invitados{
+	.invitados, .box-asistir .box-title{
 		font-size: 4vw;
 	}
   	.iglesia .text, .lidotel .text{
+		font-size: 3vw;
+	}
+	.box-asistir label, .box-asistir textarea {
 		font-size: 3vw;
 	}
 }
@@ -437,3 +460,38 @@ main h1{
 #sound-bottom.play-sound{	
     background: url(sound.png) no-repeat center center / contain;
 }
+.box-asistir {
+	-webkit-transition: background-color 200ms cubic-bezier(0.0,0.0,0.2,1);
+    transition: background-color 200ms cubic-bezier(0.0,0.0,0.2,1);
+    background-color: #fff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding: 24px;
+    page-break-inside: avoid;
+    word-wrap: break-word;
+}
+
+.form-check .form-check-input{
+	margin-left: 0;
+}
+.form-check-label {
+    width: 80%;
+    text-align: left;
+}
+.btn-enviar {
+    color: #fff;
+    background-color: #f67e7d;
+    border-color: #f67e7d;
+	font-size: 70%;
+}
+/*@media (min-width: 576px){
+.box-asistir {
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 1px;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+}*/
