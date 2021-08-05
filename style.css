@@ -40,6 +40,32 @@ body {
     opacity: .3;
     background: #000;
 }
+.arrow-down {
+	border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.arrow-down:before {
+	content: ' ';
+	border: solid white;
+    border-width: 0 1px 1px 0;
+    display: block;
+    width: 15px;
+    height: 15px;
+	
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-name: arrow;
+}
+ 
+@keyframes arrow {
+  0%   { opacity: 1; }
+  100% { opacity: 0; transform: translate(-10px, -10px); }
+}
+
 
 .cover-container {
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
@@ -444,15 +470,15 @@ main h1{
 }
 }
 .bottom-audio {
-    bottom: 35px;
+    bottom: 40px;
     opacity: .7;
-    text-align: right;
+    position: fixed;
+	right: 10vw;
 }
 #sound-bottom {
 	height: 40px;
     width: 50px;
     border: 0;
-    margin-right: 10vw;
 }
 #sound-bottom.mute-sound{	
     background: url(mute.png) no-repeat center center / contain;

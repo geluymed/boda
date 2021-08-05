@@ -23,7 +23,11 @@
  </head>
  
   <body class="h-100 text-center text-dark">
-  <div class="overlay"></div>
+  <div class="overlay">
+	<div style="position: absolute;bottom: 40px;left: 50%;">
+		<a href="#Segundo"><i class="arrow-down"></i></a>
+	</div>
+  </div>
   <div class="cover-container d-flex w-100 h-100 px-4 mx-auto flex-column row js-fullheight justify-content-center align-items-center">
   
   <main class="px-3 my-5">
@@ -44,7 +48,7 @@
 
 </div>
 
-<div class="px-4 py-5 text-center anillos oculto">
+<div id="Segundo" class="px-4 py-5 text-center anillos oculto">
   <div class="px-3 my-3">
   <div class="invitados text text-center" style="min-height:auto">
 	<div class="py-5">
@@ -186,7 +190,7 @@
   </div>
   </div>
 </div>
-<div class="fixed-bottom bottom-audio">
+<div class="bottom-audio">
 	<button id="sound-bottom" class="mute-sound"></button>
 </div>
 <audio id="music">
